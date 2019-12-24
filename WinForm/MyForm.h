@@ -112,9 +112,9 @@ namespace WinForm {
 				this->Column3,
 					this->Column6
 			});
-			this->dataGridView3->Location = System::Drawing::Point(409, 61);
+			this->dataGridView3->Location = System::Drawing::Point(409, 261);
 			this->dataGridView3->Name = L"dataGridView3";
-			this->dataGridView3->Size = System::Drawing::Size(586, 559);
+			this->dataGridView3->Size = System::Drawing::Size(586, 359);
 			this->dataGridView3->TabIndex = 34;
 			this->dataGridView3->Visible = false;
 			// 
@@ -141,9 +141,9 @@ namespace WinForm {
 				this->Column2,
 					this->Column5
 			});
-			this->dataGridView2->Location = System::Drawing::Point(409, 61);
+			this->dataGridView2->Location = System::Drawing::Point(409, 261);
 			this->dataGridView2->Name = L"dataGridView2";
-			this->dataGridView2->Size = System::Drawing::Size(586, 559);
+			this->dataGridView2->Size = System::Drawing::Size(586, 359);
 			this->dataGridView2->TabIndex = 33;
 			this->dataGridView2->Visible = false;
 			// 
@@ -170,9 +170,9 @@ namespace WinForm {
 				static_cast<System::Byte>(204)));
 			this->radioButton3->Location = System::Drawing::Point(241, 189);
 			this->radioButton3->Name = L"radioButton3";
-			this->radioButton3->Size = System::Drawing::Size(140, 28);
+			this->radioButton3->Size = System::Drawing::Size(164, 28);
 			this->radioButton3->TabIndex = 32;
-			this->radioButton3->Text = L"|U(x,y)-V(x,y)|";
+			this->radioButton3->Text = L"|U(x,y)-V(S)(x,y)|";
 			this->radioButton3->UseVisualStyleBackColor = true;
 			this->radioButton3->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton3_CheckedChanged);
 			// 
@@ -197,10 +197,10 @@ namespace WinForm {
 				static_cast<System::Byte>(204)));
 			this->radioButton1->Location = System::Drawing::Point(241, 121);
 			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(77, 28);
+			this->radioButton1->Size = System::Drawing::Size(101, 28);
 			this->radioButton1->TabIndex = 30;
 			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"V(x,y)";
+			this->radioButton1->Text = L"V(S)(x,y)";
 			this->radioButton1->UseVisualStyleBackColor = true;
 			this->radioButton1->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton1_CheckedChanged);
 			// 
@@ -329,9 +329,9 @@ namespace WinForm {
 				this->Column1,
 					this->Column4
 			});
-			this->dataGridView1->Location = System::Drawing::Point(409, 61);
+			this->dataGridView1->Location = System::Drawing::Point(409, 261);
 			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(586, 559);
+			this->dataGridView1->Size = System::Drawing::Size(586, 359);
 			this->dataGridView1->TabIndex = 18;
 			// 
 			// Column1
@@ -353,9 +353,9 @@ namespace WinForm {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(593, 12);
+			this->pictureBox1->Location = System::Drawing::Point(507, 6);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(232, 41);
+			this->pictureBox1->Size = System::Drawing::Size(403, 249);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
 			this->pictureBox1->TabIndex = 35;
 			this->pictureBox1->TabStop = false;
@@ -608,7 +608,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 	sprintf_s(buffer, "%.6e", Eps_max);
 	ref += buffer;
 	ref += "\r\n";
-	ref += "Максимальная глобальная погрешность |U-V|=";
+	ref += "Максимальная общая погрешность   |U-V(S)|=";
 	sprintf_s(buffer, "%.6e", MaxPogr);
 	ref += buffer;
 	ref += "\r\n";
